@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Block, Input, ImShearchStyled, Wrapper } from './Filter.styled';
-import { addFilter } from ' redux/filterSlice';
+import { addFilter } from 'redux/filterSlice';
 import { useDispatch } from 'react-redux';
 
 export function Filter() {

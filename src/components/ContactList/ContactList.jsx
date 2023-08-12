@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { Button, List, Item } from './ContactList.styled';
-import { UseSelector, useDispatch, useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getFilteredContacts } from 'redux/selectors';
-import { deleteContact, updateContact } from 'components';
+import { deleteContact, updateContact } from 'redux/operations';
 import { EditContact } from 'components/EditContact/EditContact';
 import { FiTrash2, FiPhone } from 'react-icons/fi';
 

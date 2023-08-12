@@ -8,7 +8,7 @@ import {
   ImPhoneStyled,
   ImUserPlusStyled,
 } from './ContactForm.styled';
-import { Button } from 'components';
+import { Button } from 'components/ContactList/ContactList.styled';
 import { selectContacts } from 'redux/selectors';
 import { FiUserPlus } from 'react-icons/fi';
 

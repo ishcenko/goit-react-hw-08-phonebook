@@ -19,7 +19,7 @@ function Contacts() {
   return (
     <Block>
       {isLoading && <Loader />}
-      <Title>Contacts list:</Title>
+      <Title>Contact list:</Title>
       <ContactForm />
       <Filter />
       <ContactList />

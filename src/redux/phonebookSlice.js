@@ -1,4 +1,4 @@
-import { createSlice, isANiOf } from '@reduxjs/toolkit';
+import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
   addContact,
   deleteContact,
@@ -33,7 +33,7 @@ const contactSlice = createSlice({
         state.isLoading = false;
       })
       .addMatcher(
-        isANiOf(
+        isAnyOf(
           getContacts.rejected,
           deleteContact.rejected,
           addContact.rejected,
@@ -45,7 +45,7 @@ const contactSlice = createSlice({
         }
       )
       .addMatcher(
-        isANiOf(
+        isAnyOf(
           getContacts.pending,
           deleteContact.pending,
           addContact.pending,
