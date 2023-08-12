@@ -11,11 +11,10 @@ export const AuthNav = () => {
   const handleLogout = () => {
     dispatch(logOut());
   };
-
   return (
     <Wrapper>
       <NavLinkStyled to="contacts">Phonebook</NavLinkStyled>
-      <WelcomeTitle>Welcome,{user.name}</WelcomeTitle>
+      <WelcomeTitle>Welcome, {user.name}</WelcomeTitle>
       <Button type="button" onClick={handleLogout}>
         <FiLogOut />
       </Button>

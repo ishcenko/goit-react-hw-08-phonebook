@@ -11,22 +11,27 @@ const initialState = {
   isLoading: false,
   error: null,
 };
-
 const contactSlice = createSlice({
   name: 'contacts',
+
   initialState,
 
-  extraReducers: buider =>
-    buider
-      .addCase(getContacts.fuifilled, (state, { payload }) => {
+  extraReducers: builder =>
+    builder
+
+      .addCase(getContacts.fulfilled, (state, { payload }) => {
         state.items = [...payload].reverse();
         state.isLoading = false;
       })
-      .addCase(deleteContact.fuifilled, (state, { payload }) => {
+      .addCase(deleteContact.fulfilled, (state, { payload }) => {
         state.items = state.items.filter(item => item.id !== payload.id);
         state.isLoading = false;
       })
-      .addCase(updateContact.fuifilled, (state, action) => {
+      .addCase(addContact.fulfilled, (state, { payload }) => {
+        state.items = [payload, ...state.items];
+        state.isLoading = false;
+      })
+      .addCase(updateContact.fulfilled, (state, action) => {
         state.items = state.items.map(el =>
           el.id === action.payload.id ? action.payload : el
         );

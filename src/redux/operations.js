@@ -12,19 +12,17 @@ export const getContacts = createAsyncThunk(
     }
   }
 );
-
 export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (contact, thunkAPI) => {
     try {
-      const res = await instance.post('contacts', contact);
+      const res = await instance.post('/contacts', contact);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
   }
 );
-
 export const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
   async (contactId, thunkAPI) => {
@@ -36,7 +34,6 @@ export const deleteContact = createAsyncThunk(
     }
   }
 );
-
 export const updateContact = createAsyncThunk(
   'contacts/updateContact',
   async ({ id, formData }, thunkApi) => {

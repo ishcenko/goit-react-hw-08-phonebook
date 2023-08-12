@@ -8,8 +8,8 @@ export const NavLinkStyled = styled(NavLink)`
   font-weight: 400;
   text-decoration: none;
 
-  &.hover,
-  &.focus {
+  &:hover,
+  &:focus {
     color: blue;
   }
 
@@ -21,14 +21,13 @@ export const NavLinkStyled = styled(NavLink)`
     text-decoration: underline;
   }
 `;
-
 export const LinkList = styled.ul`
   display: flex;
+
   align-items: center;
   list-style: none;
-  gap: 12px;
+  gap: 10px;
 `;
-
 export const LinkItem = styled.li`
   justify-content: flex-end;
 `;

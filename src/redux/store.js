@@ -12,7 +12,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { contactReducer } from './phonebookSlice';
 import { filterReducer } from './filterSlice';
-import { userRedcer } from './user/userSlice';
+import { userReducer } from './user/userSlice';
 
 const persistConfig = {
   key: 'user',
@@ -21,7 +21,7 @@ const persistConfig = {
   whitelist: ['token'],
 };
 
-const persistedReducer = persistReducer(persistConfig, userRedcer);
+const persistedReducer = persistReducer(persistConfig, userReducer);
 
 export const store = configureStore({
   reducer: {
@@ -32,10 +32,9 @@ export const store = configureStore({
 
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
-      serializableCgeck: {
-        ignoreActions: [FLUSH, REHYDRATE, PAUSE, PURGE, REGISTER, PERSIST],
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
     }),
 });
-
 export const persistor = persistStore(store);

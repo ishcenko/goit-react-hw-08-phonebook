@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import {
   StyledForm,
   Paragraph,
-  FloatLabel,
+  Floatlabel,
   Input,
   Button,
 } from './UserForm.styled';
 
-function USerForm({ onSubmit, isLoginForm = false }) {
+function UserForm({ onSubmit, isLoginForm = false }) {
   const nameInputRef = useRef();
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
@@ -28,25 +28,25 @@ function USerForm({ onSubmit, isLoginForm = false }) {
 
   return (
     <StyledForm onSubmit={handleSubmit}>
-      <h2 className="form-title">{isLoginForm ? 'Sing in' : 'Sing up'}</h2>
+      <h2 className="form-title">{isLoginForm ? 'Sign In' : 'Sign Up'}</h2>
       {isLoginForm ? null : (
         <Paragraph>
-          <FloatLabel className="floatLabel" htmlFor="name">
+          <Floatlabel className="floatLabel" htmlFor="name">
             Name
-          </FloatLabel>
+          </Floatlabel>
           <Input type="text" name="name" ref={nameInputRef} required />
         </Paragraph>
       )}
       <Paragraph>
-        <FloatLabel className="floatLabel" htmlFor="email">
+        <Floatlabel className="floatLabel" htmlFor="email">
           Email
-        </FloatLabel>
+        </Floatlabel>
         <Input type="email" name="email" ref={emailInputRef} required />
       </Paragraph>
       <Paragraph>
-        <FloatLabel className="floatLabel" htmlFor="password">
+        <Floatlabel className="floatLabel" htmlFor="password">
           Password
-        </FloatLabel>
+        </Floatlabel>
         <Input
           type="password"
           name="password"
@@ -55,15 +55,16 @@ function USerForm({ onSubmit, isLoginForm = false }) {
           required
         />
       </Paragraph>
+
       <Button type="submit">
-        {isLoginForm ? 'Sing In' : 'Create my account'}
+        {isLoginForm ? 'Sign In' : 'Create My Account'}
       </Button>
     </StyledForm>
   );
 }
 
-USerForm.propTypes = {
+UserForm.propTypes = {
   onSubmit: PropTypes.func.isRequired,
 };
 
-export default USerForm;
+export default UserForm;

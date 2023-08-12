@@ -12,7 +12,6 @@ export function ContactList() {
   const handleDelete = id => {
     dispatch(deleteContact(id));
   };
-
   const handleEdit = (id, formData) => {
     dispatch(updateContact({ id, formData }));
   };
@@ -29,7 +28,7 @@ export function ContactList() {
           return (
             <Item key={id}>
               <p>
-                <b>{name}:</b>{' '}
+                <b>{name}: </b>{' '}
               </p>{' '}
               <p>{number}</p>
               <Button onClick={() => handleDelete(id)}>

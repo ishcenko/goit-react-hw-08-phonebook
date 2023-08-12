@@ -8,6 +8,7 @@ const initialState = {
   isRefreshing: false,
   status: 'idle',
 };
+
 const userSlice = createSlice({
   name: 'user',
   initialState,
@@ -43,4 +44,4 @@ const userSlice = createSlice({
       }),
 });
 
-export const userRedcer = userSlice.reducer;
+export const userReducer = userSlice.reducer;

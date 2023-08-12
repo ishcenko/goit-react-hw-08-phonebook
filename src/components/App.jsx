@@ -1,8 +1,10 @@
-import { useDispatch } from 'react-redux';
 import { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Loader } from './Loader/Loader';
+
+import { useDispatch } from 'react-redux';
 import { Navbar } from './Navbar/Navbar';
+
 import { refreshUser } from 'redux/user/operations';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';

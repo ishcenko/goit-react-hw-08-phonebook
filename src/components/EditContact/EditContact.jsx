@@ -16,11 +16,11 @@ export const EditContact = ({ onSubmit }) => {
   const numberInputRef = useRef();
   const nameInputRef = useRef();
 
-  const handleSubmit = event => {
+  const handelSubmit = event => {
     event.preventDefault();
 
     const formData = {
-      number: nameInputRef.current.value,
+      number: numberInputRef.current.value,
       name: nameInputRef.current.value,
     };
 
@@ -30,7 +30,7 @@ export const EditContact = ({ onSubmit }) => {
   };
 
   const toggleModal = () => {
-    setShowModal(!setShowModal);
+    setShowModal(!showModal);
   };
 
   return (
@@ -38,10 +38,15 @@ export const EditContact = ({ onSubmit }) => {
       <Button type="button" onClick={toggleModal}>
         <FiTool />
       </Button>
+
       {showModal && (
-        <Backdrop onClick={toggleModal}>
-          <Modal onClick={event => event.stopPropagation()}>
-            <Form onSubmit={handleSubmit}>
+        <Backdrop
+          onClick={toggleModal} // close the modal when the backdrop is clicked
+        >
+          <Modal
+            onClick={event => event.stopPropagation()} // prevent closing the modal when the form is clicked
+          >
+            <Form onSubmit={handelSubmit}>
               <Label htmlFor="name">
                 <ImUserPlusStyled />{' '}
               </Label>
@@ -49,13 +54,18 @@ export const EditContact = ({ onSubmit }) => {
                 ref={nameInputRef}
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="New name"
                 bg="white"
               />
               <Label htmlFor="number">
                 <ImPhoneStyled />{' '}
               </Label>
-              <Input ref={numberInputRef} name="number" placeholder="Number" />
+              <Input
+                ref={numberInputRef}
+                name="number"
+                placeholder="New number"
+              />
+
               <Button type="submit" className="selected">
                 <FiUserCheck />
               </Button>

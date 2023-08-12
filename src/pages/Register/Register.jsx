@@ -1,18 +1,20 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import USerForm from 'components/UserForm/UserForm';
+
+import UserForm from 'components/UserForm/UserForm.jsx';
 import { register } from 'redux/user/operations';
 
 function Register() {
   const dispatch = useDispatch();
-  const handleRegister = FormData => {
-    console.log(FormData);
-    dispatch(register(FormData));
+
+  const handleRegister = formData => {
+    console.log(formData);
+    dispatch(register(formData));
   };
 
   return (
     <div>
-      <USerForm onSubmit={handleRegister} />
+      <UserForm onSubmit={handleRegister} />
     </div>
   );
 }
