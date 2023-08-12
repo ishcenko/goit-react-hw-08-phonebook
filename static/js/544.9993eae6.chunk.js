@@ -1,2 +1,0 @@
-(self.webpackChunkreact_homework_template=self.webpackChunkreact_homework_template||[]).push([[544],{544:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return l}});var r=n(398),c=n(184);function l(){return(0,c.jsxs)(r.Container,{children:[(0,c.jsx)(r.Title,{className:"tracking-out-expand",children:"Welcome"}),(0,c.jsx)(r.Block,{children:(0,c.jsx)(r.ImAddressBookStyled,{className:"roll-in-left"})})]})}},398:function(){}}]);
-//# sourceMappingURL=544.9993eae6.chunk.js.map
