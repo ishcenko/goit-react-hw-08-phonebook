@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
   padding: 2em 2em 2em;
   max-width: 400px;
   margin: 50px auto 0;
-  box-shadow: 0 0 1em #222;
+  box-shadow: 0 0 1em #211d1d;
   border-radius: 2px;
   @media (min-width: 768px) {
     padding: 4em 4em 2em;
@@ -16,8 +16,8 @@ export const StyledForm = styled.form`
     padding: 10px;
     text-align: center;
     font-size: 30px;
-    color: darken(#e5e5e5, 50%);
-    border-bottom: solid 1px #e5e5e5;
+    color: darken(#0a0909, 50%);
+    border-bottom: solid 1px #060606;
   }
 `;
 export const Paragraph = styled.p`
@@ -30,7 +30,7 @@ export const Floatlabel = styled.label`
   position: absolute;
   left: 8px;
   top: 12px;
-  color: #999;
+  color: #0c0c0c;
   font-size: 16px;
   display: inline-block;
   padding: 4px 10px;
@@ -38,7 +38,7 @@ export const Floatlabel = styled.label`
   background-color: transparent;
   @include transition(color 0.3s, top 0.3s, background-color 0.8s);
   &.floatLabel {
-    top: -11px;
+    top: -30px;
     background-color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
   }
@@ -50,7 +50,7 @@ export const Input = styled.input`
   outline: none;
   margin: 0;
   background: #fff;
-  border: 1px solid #dbdbdb;
+  border: 1px solid #080808;
   font-size: 1.2em;
   padding: 0.8em 0.5em;
   border-radius: 2px;
@@ -59,9 +59,9 @@ export const Input = styled.input`
   }
 `;
 export const Button = styled.button`
-  background: green;
+  background: #0305a8;
   box-shadow: 0 3px 0 0 grey;
-  border-radius: 2px;
+  border-radius: 10px;
   border: none;
   color: #fff;
   cursor: pointer;

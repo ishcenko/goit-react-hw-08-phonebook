@@ -8,7 +8,7 @@ export const NavBar = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
-  border-bottom: 1px solid #2a363b;
+  border-bottom: 1px solid #1a0597;
   padding: 0 25px;
 `;
 
@@ -42,6 +42,6 @@ export const NavLinkStyled = styled(NavLink)`
 
 export const OutletStyled = styled(Outlet)``;
 export const ImHomeStyled = styled(ImHome)`
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
 `;

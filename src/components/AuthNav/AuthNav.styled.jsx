@@ -12,8 +12,8 @@ export const Wrapper = styled.div`
 export const WelcomeTitle = styled.p`
   text-align: center;
   font-style: italic;
-  font-weight: 400;
-  font-size: 11px;
+  font-weight: 600;
+  font-size: 14px;
   @media (min-width: 768px) {
     font-weight: 400;
     font-size: 20px;
@@ -31,11 +31,11 @@ export const NavLinkStyled = styled(NavLink)`
   }
   &:hover,
   &:focus {
-    color: blueviolet;
+    color: #1f048c;
   }
 
   &.active {
-    color: blueviolet;
+    color: #1f048c;
     padding: 6px 12px;
     border-radius: 4px;
     pointer-events: none;

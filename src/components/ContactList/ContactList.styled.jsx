@@ -61,8 +61,8 @@ export const Item = styled.li`
   display: grid;
   grid-template-columns: 1fr 1fr auto auto auto;
   grid-template-rows: 32px;
-  grid-gap: 0.5em;
-  border-bottom: 1px solid #dbdbdb;
+  grid-gap: 1em;
+  border-bottom: 1px solid #0d0d0d;
   padding: 0.5em;
   font-size: 0.8em;
 `;

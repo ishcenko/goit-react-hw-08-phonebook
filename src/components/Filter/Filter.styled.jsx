@@ -10,10 +10,10 @@ export const Block = styled.div`
 `;
 export const Input = styled.input`
   width: 100%;
-  border: 1px solid #dbdbdb;
-  font-size: 0.8em;
+  border: 2px solid #141313;
+  font-size: 0.95em;
   padding: 0.8em 0.5em;
-  border-radius: 2px;
+  border-radius: 7px;
 
   &:hover {
     border-color: #3616ef;
@@ -28,5 +28,5 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 18px;
 `;

@@ -40,12 +40,8 @@ export const EditContact = ({ onSubmit }) => {
       </Button>
 
       {showModal && (
-        <Backdrop
-          onClick={toggleModal} // close the modal when the backdrop is clicked
-        >
-          <Modal
-            onClick={event => event.stopPropagation()} // prevent closing the modal when the form is clicked
-          >
+        <Backdrop onClick={toggleModal}>
+          <Modal onClick={event => event.stopPropagation()}>
             <Form onSubmit={handelSubmit}>
               <Label htmlFor="name">
                 <ImUserPlusStyled />{' '}

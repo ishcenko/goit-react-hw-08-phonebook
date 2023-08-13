@@ -16,6 +16,7 @@ export function Filter() {
         <Input
           type="text"
           name="filter"
+          placeholder="Search"
           onChange={event => dispatch(addFilter(event.target.value))}
         />
       </Wrapper>

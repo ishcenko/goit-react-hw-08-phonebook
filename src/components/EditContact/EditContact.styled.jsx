@@ -6,11 +6,12 @@ export const Backdrop = styled.div`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 `;
 export const Modal = styled.div`
   position: absolute;
+  width: 350px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -22,5 +23,5 @@ export const Modal = styled.div`
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
 `;

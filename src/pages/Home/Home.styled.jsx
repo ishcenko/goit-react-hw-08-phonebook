@@ -16,7 +16,7 @@ export const Title = styled.h1`
   font-style: italic;
 
   &.tracking-out-expand {
-    animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+    animation: text-focus-in 850ms cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   }
 
   @keyframes text-focus-in {
@@ -42,17 +42,6 @@ export const ImAddressBookStyled = styled(ImAddressBook)`
   fill: #3616ef;
 
   &.roll-in-left {
-    animation: roll-in-left 0.6s ease-out both;
-  }
-
-  @keyframes roll-in-left {
-    0% {
-      transform: translateX(-800px) rotate(-540deg);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0) rotate(0deg);
-      opacity: 1;
-    }
+    animation: roll-in-left 0.2s ease-out both;
   }
 `;

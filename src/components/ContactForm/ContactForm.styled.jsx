@@ -31,8 +31,8 @@ export const Label = styled.label`
 `;
 
 export const ImUserPlusStyled = styled(ImUserPlus)`
-  fill: #3616ef;
+  fill: #170485;
 `;
 export const ImPhoneStyled = styled(ImPhone)`
-  fill: #3616ef;
+  fill: #170485;
 `;
